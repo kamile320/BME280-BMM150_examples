@@ -1,0 +1,2 @@
+bmm150
+enum-tools>=0.12.0
