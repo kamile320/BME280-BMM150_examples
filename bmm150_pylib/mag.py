@@ -3,7 +3,7 @@ import math
 import time
 
 
-# Template scripts for reading data via bmm150 library.
+# Example scripts for reading magnetometer data using bmm150 library.
 # Using bmm150 library to read data from BMM150 magnetometer; source: https://pypi.org/project/bmm150/
 device = bmm150.BMM150()
 k_int  = '\nCancelled [KeyboardInterrupt].'
@@ -20,7 +20,7 @@ def reading():
     print(f"X : {x:.2f}µT")
     print(f"Y : {y:.2f}µT")
     print(f"Z : {z:.2f}µT")
-    
+
     print(f"Heading: {heading_degrees:.2f}°")
 
 
@@ -39,7 +39,7 @@ def live_reading():
             print(f"Z : {z:.2f}µT")
 
             print(f"Heading: {heading_degrees:.2f}°")
-            
+
             time.sleep(time_interval)
 
     except KeyboardInterrupt:
@@ -94,7 +94,7 @@ Select operation:
 2. Live readings from BMM150
 3. Looped direction tracking
 4. Quit""")
-    
+
     mode = int(input(">>> "))
     if mode == 1:
         reading()
